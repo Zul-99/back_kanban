@@ -1,5 +1,5 @@
 server:
-  port: ${PORT:${SERVER_PORT:8083}}
+port: ${PORT:${SERVER_PORT:8083}}
 
 spring:
   application:
@@ -48,3 +48,7 @@ management:
     web:
       exposure:
         include: health
+
+logging:
+  level:
+    org.hibernate.SQL: ${LOG_LEVEL_SQL:INFO}
